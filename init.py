@@ -1,9 +1,9 @@
 ﻿# -*- coding: utf-8 -*-
-from config.dict_app import Glob
-from model.GestionDb import *
-from services.import_activite import *
-from services.import_equipement import *
-from services.import_installation import *
+from common.model.dict_app import Glob
+from common.model.GestionDb import *
+from import_csv.import_activite import *
+from import_csv.import_equipement import *
+from import_csv.import_installation import *
 
 """
 Script permettant d'effectuer des opérations sur la base de données

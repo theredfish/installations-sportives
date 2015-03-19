@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from model.GestionDb import *
-from config.dict_app import Glob
+from dict_app import Glob
+from GestionDb import *
 
 """
 Classe Equipement ayant la responsabilité de s'ajouter en base de données

@@ -1,6 +1,9 @@
 ﻿# -*- coding: utf-8 -*-
 import csv
-from model.Installation import *
+import sys
+sys.path.append('common/model/')
+from Installation import *
+# from model.Installation import *
 
 """
 Script permettant d'importer toutes les installations

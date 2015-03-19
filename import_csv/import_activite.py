@@ -1,7 +1,11 @@
 ﻿# -*- coding: utf-8 -*-
 import csv
-from model.Activite import *
-from model.EquipementActivite import *
+import sys
+sys.path.append('common/model/')
+from Activite import *
+from EquipementActivite import *
+# from common.model.Activite import *
+# from model.EquipementActivite import *
 
 """
 Script permettant d'importer toutes les activites
