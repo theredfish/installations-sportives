@@ -34,7 +34,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  	<ul class="nav navbar-nav">
 						<li>
-							<a href="/act">Résultat</a>
+							<a href="/resultat">Résultat</a>
 						</li>
 						<li>
 							<a href="/plan">Plan</a>
@@ -49,11 +49,11 @@
 			<div class="col-lg-4 col-md-4">
 			</div>
 			<div class="col-lg-4 col-md-4 col-xs-12">
-				<form method="POST" action="act">
+				<form method="get" action="resultat">
 					<div class="form-group">
-						<input id="ville" class="form-control" placeholder="Enter une ville" type="text" name="ville"/>
-						<input id="sport" class="form-control" placeholder="Enter un sport" type="text" name="sport"/>
-						<input id="equipement" class="form-control" placeholder="Enter un equipement" type="text" name="equipement"/>
+						<input id="ville" class="form-control" placeholder="Entrez une ville" type="text" name="ville"/>
+						<input id="sport" class="form-control" placeholder="Entrez un sport" type="text" name="sport"/>
+						<input id="equipement" class="form-control" placeholder="Entrez un equipement" type="text" name="equipement"/>
 						<br>
 						
 						<ul id="menu-accordeon">
@@ -62,13 +62,13 @@
 									<div class="menuListe">
 									    <ul>
 								        <li>
-								        	<input class="form-control" placeholder="Enter une ville" type="text" name="ville2"/>
+								        	<input class="form-control" placeholder="Entrez un id d'équipement" type="text" name="idEquipement"/>
 								        </li>
 								        <li>
-								        	<input class="form-control" placeholder="Enter un sport" type="text" name="sport2"/>
+								        	<input class="form-control" placeholder="Entrez une adresse" type="text" name="adresse"/>
 								        </li>
 								        <li>
-								        	<input class="form-control" placeholder="Enter un equipement" type="text" name="equipement2"/>
+								        	<input class="form-control" placeholder="Entrez un code postal" type="text" name="codePostal"/>
 								        </li>
 								        <li>
 								        	<div class="radio">
