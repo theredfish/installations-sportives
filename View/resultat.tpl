@@ -31,7 +31,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  	<ul class="nav navbar-nav">
 						<li>
-							<a href="/act">Résultat</a>
+							<a href="/resultat">Résultat</a>
 						</li>
 						<li>
 							<a href="/plan">Plan</a>
@@ -43,23 +43,29 @@
 		</div> <!-- /header -->
 
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-xs-3">
+			<div class="col-lg-2 col-md-2 col-xs-2">
 			</div>
-			<div class="col-lg-6 col-md-6 col-xs-6">
+			<div class="col-lg-8 col-md-8 col-xs-8">
 				<table class="table table-bordered table-hover">
 					<tr>
 						<th>{{Colonne1}}</th>
 						<th>{{Colonne2}}</th>
 						<th>{{Colonne3}}</th>
+						<th>{{Colonne4}}</th>
+						<th>{{Colonne5}}</th>
+						<th>{{Colonne6}}</th>
 					</tr>
 				    <tr>
 					    <td>{{ville}}</td>
 					    <td>{{sport}}</td>
 					    <td>{{equipement}}</td>
+					    <td>{{idEquipement}}</td>
+					    <td>{{adresse}}</td>
+					    <td>{{codePostal}}</td>
 					</tr>
 				</table>
 			</div>
-			<div class="col-lg-3 col-md-3 col-xs-3">
+			<div class="col-lg-2 col-md-2 col-xs-2">
 			</div>
 	</body>
 </html>
