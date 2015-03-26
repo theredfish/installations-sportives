@@ -15,9 +15,12 @@ def blabl():
 				'equipement' : "request.params.equipement"}
 	return (context)
 
-@route('/act')
+@route('/act', method="POST")
 @view('action.tpl')
 def index():
+	ville = request.forms.get('ville')
+
+	
 	context = {'title': "Formulaire", 
 				'h1': "Resultat", 
 				'Colonne1': "Ville", 
@@ -28,6 +31,13 @@ def index():
 				'ville' : "%s" %request.params.ville,
 				'sport' : "%s" %request.params.sport,
 				'equipement' : "%s" %request.params.equipement}
+	return (context)
+
+@route('/plan')
+@view('plan.tpl')
+def plan():
+	context = {'title' : 'Plan', 'contient' : "Ceci est du text !"}
+
 	return (context)
 
 
