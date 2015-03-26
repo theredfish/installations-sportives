@@ -20,7 +20,7 @@ class GestionBD():
 		try:
 			self.db = mdb.connect(self.host, self.user, self.passwd, self.dbname, charset='utf8', init_command='SET NAMES UTF8')
 
-		except __mysql.Error, e:
+		except _mysql.Error, e:
 			self.echec = 1
 			print "Error %d: %s" % (e.args[0], e.args[1])
 			sys.exit(1)
