@@ -96,7 +96,9 @@ class GestionBD():
 
 	def executerReq(self, req):
 		"""
-		Exécution de la requête <req>, avec détection d'erreur éventuelle
+		Exécution de la requête <req>, avec détection d'erreur éventuelle.
+		L'exécution retourne 1 si tout ce passe bien, sinon 0.
+		Le résultat de la requête n'est pas retourné.
 		"""
 		
 		try:
@@ -108,6 +110,23 @@ class GestionBD():
 			return 0
 		else:
 			return 1
+
+	def lireSelect(self, req):
+		"""
+		Fonction permettant de retourner le résultat d'une requête de sélection
+		req étant la requête de sélection à exécuter pour retourner son résultat
+		"""
+		try:
+			self.cursor.execute(req)
+			rows = self.cursor.fetchall()
+		except Exception, err:
+			# afficher la requête et le message d'erreur système :
+			print "Requête SQL incorrecte :\n%s\nErreur détectée :\n%s"\
+			       % (req, err)
+			return None
+		else:
+			return rows
+
 
 	def supprimerTables(self, dicTables):
 		"""
