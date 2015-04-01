@@ -50,35 +50,15 @@
 							<th>Ville</th>
 							<th>Equipement</th>
 							<th>Sport</th>
+							<th>
 						</tr>
 					</thead>
 					<tbody>
 							%for row in rows:
 							<tr>
-							
-					  			<td>
-					  				%if(row[0]) == '':
-					  					<span>-</span>
-					  				%else:
-					  					{{row[0]}}
-					  				%end
-					  			</td>
-
-					  			<td>
-					  				%if(row[1]) == '':
-					  					<span>-</span>
-					  				%else:
-					  					{{row[1]}}
-					  				%end
-					  			</td>
-
-					  			<td>
-					  				%if(row[2]) == '':
-					  					<span>-</span>
-					  				%else:
-					  					{{row[2]}}
-					  				%end
-					  			</td>
+								%for val in row:
+									<td>{{val}}</td>
+								%end
 					  		</tr>
 					  		%end
 					</tbody>
