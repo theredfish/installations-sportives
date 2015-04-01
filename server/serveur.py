@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 from libs.bottle import run, view, post, request, route, template, static_file
 import sys
 sys.path.append('../common/model/')
