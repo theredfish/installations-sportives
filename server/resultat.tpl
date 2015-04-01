@@ -6,7 +6,6 @@
 		<link href="static/main.css" rel="stylesheet" media="screen">
 		<script src="static/bootstrap/js/jquery.js"></script>
 		<script src="static/bootstrap/js/bootstrap.min.js"></script>
-		<script src="static/main.js"></script>
 	</head>
 	<body>
 		<div class="jumbotron text-center">
@@ -42,18 +41,30 @@
 							<th>Ville</th>
 							<th>Equipement</th>
 							<th>Sport</th>
-							<th class="adresseCol">Adresse</th>
-							<th class="coordCol">Coordonnées</th>
+							%if(adr):
+								<th>Code Postal</th>
+								<th>Adresse</th>
+							%end
+							%if(coord):
+								<th>Coordonnées</th>
+							%end
 						</tr>
 					</thead>
 					<tbody>
 							%for row in rows:
-							<tr>
-								%for val in row:
-									<td>{{val}}</td>
-								%end
-					  		</tr>
-					  		%end
+								<tr>
+									<td>{{row[0]}}</td>
+									<td>{{row[1]}}</td>
+									<td>{{row[2]}}</td>
+									%if(adr):
+										<td>{{row[3]}}</td>
+										<td>{{row[4]}}</td>
+									%end
+									%if(coord):
+										<td><a href="#">{{row[5]}}</a></td>
+									%end
+								</tr>
+							%end
 					</tbody>
 				</table>
 			</div>

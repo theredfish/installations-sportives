@@ -6,7 +6,6 @@
 		<script src="static/bootstrap/js/jquery.js"></script>
 		<script src="static/bootstrap/js/main.js"></script>
 		<script src="static/bootstrap/js/bootstrap.min.js"></script>
-		<script src="static/main.js"></script>
 	</head>
 
 	<body>
@@ -51,13 +50,13 @@
 								<div class="menuListe alignementText">
 									<div class="checkbox">
 								  		<label>
-								    		<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+								    		<input type="checkbox" name="adresse" value="true">
 								    		Adresse
 								  		</label>
 									</div>
 									<div class="checkbox">
 								  		<label>
-								    		<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox2" value="option2">
+								    		<input type="checkbox" name="coord" value="true">
 								    		Coordonnées
 								  		</label>
 									</div>
