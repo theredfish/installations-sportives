@@ -4,6 +4,12 @@
 	margin-left: 0px !important;
 }
 
+.alignementText
+{
+  text-align: left;
+  color: #555;
+}
+
 .menu
 {
 	position: relative;

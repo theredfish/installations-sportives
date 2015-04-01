@@ -56,30 +56,21 @@
 						<ul id="menu-accordeon">
 						   <li>
 						   		<div id="showmenu"><span class="showMenuArrow hide glyphicon glyphicon-chevron-up"></span><span class="showMenuArrow glyphicon glyphicon-chevron-down"></span> Recherche avancée</div>
-									<div class="menuListe">
-									    <ul>
-								        <li>
-								        	<input class="form-control" placeholder="Entrez un id d'équipement" type="text" name="idEquipement"/>
-								        </li>
-								        <li>
-								        	<input class="form-control" placeholder="Entrez une adresse" type="text" name="adresse"/>
-								        </li>
-								        <li>
-								        	<input class="form-control" placeholder="Entrez un code postal" type="text" name="codePostal"/>
-								        </li>
-								        <li>
-								        	<div class="radio">
-												<label>
-													<input type="radio" value="homme" name="optionsRadios">Homme</input>
-												</label>
-												<label>
-													<input type="radio" value="femme" name="optionsRadios">Femme</input>
-												</label>
-											</div>
-								        </li>
-							      	</ul>
+								<div class="menuListe alignementText">
+									<div class="checkbox">
+								  		<label>
+								    		<input type="checkbox" name="optionsCheckbox1" id="optionsCheckbox1" value="option1">
+								    		Adresse
+								  		</label>
+									</div>
+									<div class="checkbox">
+								  		<label>
+								    		<input type="checkbox" name="optionsCheckbox1" id="optionsCheckbox2" value="option2">
+								    		Afficher le plan
+								  		</label>
+									</div>
 								</div>
-						   	</li>
+							</li>
 						</ul>
 						<br>
 						
