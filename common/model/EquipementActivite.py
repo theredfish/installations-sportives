@@ -2,13 +2,19 @@
 from dict_app import Glob
 from GestionDb import *
 
+"""
+Classe EquipementActivite ayant la responsabilité de s'ajouter en base de données
+"""
+
 class EquipementActivite:
 	def __init__(self, id_equipement, id_activite):
 		self.id_equipement = id_equipement
 		self.id_activite = id_activite
 
 	def save(self):
-		"""This function add a new activite to the database"""
+		"""
+		Cette fonction ajoute un nouvel equipement_activite en base de données.
+		"""
 
 		add_equipement_activite = ('INSERT IGNORE INTO equipement_activite(id_activite,id_equipement) VALUES ("{}","{}")'.format(self.id_activite, self.id_equipement))
 
@@ -21,4 +27,7 @@ class EquipementActivite:
 		db.close()
 
 	def __repr__(self):
+		"""
+		Cette fonction permet d'afficher l'objet de type EquipementActivite
+		"""
 		return "{} - {}".format(self.id_activite,self.id_equipement)

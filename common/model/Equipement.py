@@ -13,7 +13,9 @@ class Equipement:
 		self.nom = nom
 
 	def save(self):
-		"""Cette fonction permet d'ajouter un nouvel équipement en base de données"""
+		"""
+		Cette fonction permet d'ajouter un nouvel équipement en base de données
+		"""
 
 		add_equipement = ('INSERT INTO equipement VALUES ("{}","{}","{}")'.format(self.id_equipement, self.id_installation, self.nom))
 		db = GestionBD(Glob.host, Glob.user, Glob.passwd, Glob.dbName)
@@ -25,6 +27,8 @@ class Equipement:
 		db.close()
 
 	def __repr__(self):
-		"""Cette fonction permet d'afficher l'objet de type Equipement"""
+		"""
+		Cette fonction permet d'afficher l'objet de type Equipement
+		"""
 		
 		return "{} - {} - {}".format(self.id_equipement,self.id_installation,self.nom)

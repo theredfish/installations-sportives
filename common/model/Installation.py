@@ -17,7 +17,9 @@ class Installation:
 		self.longitude = longitude
 
 	def save(self):
-		"""Cette fonction permet d'ajouter en base de données une nouvelle installation"""
+		"""
+		Cette fonction permet d'ajouter en base de données une nouvelle installation
+		"""
 
 		add_installation = ('INSERT INTO installation VALUES (\
 			"{}","{}","{}","{}","{}","{}","{}")'.format(self.numero,
@@ -35,7 +37,9 @@ class Installation:
 		db.close()
 
 	def __repr__(self):
-		"""Cette fonction permet d'afficher l'objet de type Installation"""
+		"""
+		Cette fonction permet d'afficher l'objet de type Installation
+		"""
 		
 		return "{} - {} - {} - {} - {} - {} - {}".format(self.numero,
 														self.nom,

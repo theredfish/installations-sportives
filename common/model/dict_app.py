@@ -1,13 +1,52 @@
 # -*- coding: utf-8 -*-
 class Glob:
-	"""Espace de noms pour les variables et fonctions <pseudo-globales>"""
+	'''
+	================================================
+			Introduction
+	================================================
+	Ce dictionnaire est une représentation
+	de la base de données. De façon générale
+	on retrouve pour chaque entrée le nom de
+	la table. Pour chaque entrée une description
+	est fournie : 
+		- nom du champ, 
+		- type, 
+		- commentaire.
+
+	Pour la gestion des clés étrangères la gestion
+	est quelque peu différente : 
+		- nom du champ, 
+		- type, 
+		- nom cle etrangere
+		- reference cle etrangere
+
+	================================================
+			Les types utilisés
+	================================================
+	k : primary key (INTEGER UNSIGNED)
+	f : foreign key (INTEGER UNSIGNED)
+	i : INTEGER UNSIGNED
+	d : DOUBLE
+	ki : INTEGER UNSIGNED AUTO_INCREMENT
+	255 : VARCHAR(255)
+
+	================================================
+			Configuration de la connexion
+	================================================
+	Au besoin il suffit de changer les informations
+	de connexion à la base de données.
+
+	dbName : nom de la base de données
+	user : identifiant de l'utilisateur
+	passwd : mot de passe de l'utilisateur
+	host : hôte de la base de données
+	'''
 	
 	dbName = "projet_python"
 	user = "root"
 	passwd = "toor"
 	host = "127.0.0.1"
-
-	# Structure de la base de donnees sous la forme d'un dictionnaire avec tables et champs
+	
 	dicoT = {"installation":[('id_install',"k","PK cle"),
 							 ('nom', 255, "nom"),
 							 ('adresse', 255, "adresse"),
