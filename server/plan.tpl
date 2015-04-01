@@ -4,6 +4,9 @@
 		<title>{{title}}</title>
 		<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="static/main.css" rel="stylesheet" media="screen">
+		<script src="static/bootstrap/js/jquery.js"></script>
+		<script src="static/bootstrap/js/bootstrap.min.js"></script>
+		<script src="static/main.js"></script>		
 	</head>
 	<body>
 
@@ -21,15 +24,6 @@
 				  </button>
 				  <a class="navbar-brand" href="/">Recherche</a>
 				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				  	<ul class="nav navbar-nav">
-						<li>
-							<a href="/plan">Plan</a>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
 			  </div><!-- /.container-fluid -->
 			</nav><!-- /main-navbar -->
 		</div> <!-- /header -->
