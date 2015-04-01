@@ -49,8 +49,7 @@
 						<tr>
 							<th>Ville</th>
 							<th>Equipement</th>
-							<th>Sport</th>
-							<th>
+							<th>Sporté</th>
 						</tr>
 					</thead>
 					<tbody>

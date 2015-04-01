@@ -29,10 +29,8 @@ def resultat():
 	ville = request.GET.get('ville')
 	sport = request.GET.get('sport')
 	equipement = request.GET.get('equipement')
-	# idEquipement = request.GET.get('idEquipement')
 	# adresse = request.GET.get('adresse')
-	# codePostal = request.GET.get('codePostal')
-	
+	# coordonnees
 	# Si la recherche concerne uniquement une ville
 	if (ville != '' and sport == '' and equipement == ''):
 		req = "select ville, equipement.nom, activite.nom from installation, equipement, equipement_activite, activite where installation.id_install = equipement.id_install and equipement.id_equip = equipement_activite.id_equipement and equipement_activite.id_activite = activite.id_activite "
