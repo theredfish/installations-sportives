@@ -51,20 +51,20 @@
 						</tr>
 					</thead>
 					<tbody>
-							%for row in rows:
-								<tr>
-									<td>{{row[0]}}</td>
-									<td>{{row[1]}}</td>
-									<td>{{row[2]}}</td>
-									%if(adr):
-										<td>{{row[3]}}</td>
-										<td>{{row[4]}}</td>
-									%end
-									%if(coord):
-										<td><a href="#">{{row[5]}}</a></td>
-									%end
-								</tr>
-							%end
+						%for row in rows:
+							<tr>
+								<td>{{row[0]}}</td>
+								<td>{{row[1]}}</td>
+								<td>{{row[2]}}</td>
+								%if(adr):
+									<td>{{row[3]}}</td>
+									<td>{{row[4]}}</td>
+								%end
+								%if(coord):
+									<td><a href="#">{{row[5]}}</a></td>
+								%end
+							</tr>
+						%end
 					</tbody>
 				</table>
 			</div>

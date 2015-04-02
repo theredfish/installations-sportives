@@ -7,11 +7,21 @@ from dict_app import Glob
 
 @route('/static/<filename:path>')
 def server_static(filename):
+	'''
+	Gestion des librairies static.
+	Routage des informations.
+	'''
+
 	return static_file(filename, root='static/')
 
 @route('/')
 @view('template.tpl')
 def index():
+	'''
+	Fonction définissant le contexte de base.
+	Retourne des informations au template.tpl
+	'''
+
 	context = {'title': "Formulaire", 
 				'titre': "Recherche", 
 				'ville' : "request.params.ville",
@@ -22,6 +32,14 @@ def index():
 @route('/resultat')
 # @view('resultat.tpl')
 def resultat():
+	'''
+	Fonction permettant de générer un résultat.
+	Le résultat varie en fonction des mots-clés utilisateur.
+
+	Utilisation de HTTP.GET pour récupérer les informations.
+	Retourne les données du select au template resultat.
+	'''
+
 	# Objet base de données
 	db = GestionBD(Glob.host, Glob.user, Glob.passwd, Glob.dbName)
 	
@@ -32,7 +50,7 @@ def resultat():
 	adresse = request.GET.get('adresse')
 	coordonees = request.GET.get('coord')
 	
-	# Base de la requête SQL select selon les options
+	# Base fixe de la requête SQL select
 	SELECT = "select ville, equipement.nom, activite.nom, code_postal, adresse, CONCAT(longitude, CONCAT(' ', latitude)) "
 	TABLES = "from installation, equipement, equipement_activite, activite where installation.id_install = equipement.id_install and equipement.id_equip = equipement_activite.id_equipement and equipement_activite.id_activite = activite.id_activite "
 	DATAS = "and activite.nom like '%"+sport+"%' and equipement.nom like '%"+equipement+"%' "
@@ -57,6 +75,11 @@ def resultat():
 @route('/plan')
 @view('plan.tpl')
 def plan():
+	'''
+	Fonction à implanter.
+	Doit permettre d'afficher une map d'equipements
+	'''
+
 	context = {'title' : 'Plan', 'contient' : "Ceci est du text !"}
 
 	return (context)
