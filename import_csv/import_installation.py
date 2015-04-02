@@ -3,7 +3,6 @@ import csv
 import sys
 sys.path.append('common/model/')
 from Installation import *
-# from model.Installation import *
 
 """
 Script permettant d'importer toutes les installations

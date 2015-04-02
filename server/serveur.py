@@ -77,7 +77,7 @@ def resultat():
 def plan():
 	'''
 	Fonction à implanter.
-	Doit permettre d'afficher une map d'equipements
+	Doit permettre d'afficher une map d'equipements / Installations
 	'''
 
 	context = {'title' : 'Plan', 'contient' : "Ceci est du text !"}

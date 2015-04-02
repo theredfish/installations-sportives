@@ -3,7 +3,6 @@ import csv
 import sys
 sys.path.append('common/model/')
 from Equipement import *
-#from model.Equipement import *
 
 """
 Script permettant d'importer tous les equipements
